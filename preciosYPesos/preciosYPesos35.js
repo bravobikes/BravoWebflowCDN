@@ -42,11 +42,11 @@ let PRECIO_TAMANO = 0
 
 
 const frameSetChecBoxPP = document.querySelector('#frameSetChecBox')
-console.log(frameSetChecBoxPP.checked)
+console.log(frameSetChecBoxPP.checked + "Afuera")
 
 frameSetChecBoxPP.addEventListener('change', (e)=>{
         frame_set_chk = (e.target.checked)
-        console.log(frame_set_chk)
+        console.log(frame_set_chk + "Adentro")
         
         if (frame_set_chk = true){
             var bubble = PRECIO_FRAMESET
