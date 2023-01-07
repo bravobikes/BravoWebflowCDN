@@ -35,7 +35,36 @@ let PRECIO_TAMANO = 0
 
 // Precio actualizado: 66540
 
+let PRECIO_FRAMESET = 30583
 
+let PRECIO_GRUPO_105 = 25417
+let PRECIO_GRUPO_ULTEGRA = 58333
+
+let PRECIO_RUEDOS_ALUMINIO = 5083
+let PRECIO_RUEDOS_CARBON = 33333
+
+let PRECIO_MANUBRIO_ALUMINIO = 957
+let PRECIO_MANUBRIO_CARBON = 6667
+
+let PRECIO_BASE = 4500
+let PRECIO_BASE_SB_SLEEVE = 4500
+let PRECIO_BASE_SB_SEMI = 4500
+
+let PRECIO_DISENO = 0
+
+let PRECIO_TAMANO_XS = 0
+let PRECIO_TAMANO_S = 150
+let PRECIO_TAMANO_M = 300
+let PRECIO_TAMANO_ML = 300
+let PRECIO_TAMANO_L = 600
+let PRECIO_TAMANO_XL = 1200
+
+// Default values
+let PRECIO_GRUPO = PRECIO_GRUPO_105
+let PRECIO_RUEDOS = PRECIO_RUEDOS_ALUMINIO
+let PRECIO_MANUBRIO = PRECIO_MANUBRIO_ALUMINIO
+let PRECIO_BASE = PRECIO_BASE
+let PRECIO_TAMANO = PRECIO_TAMANO_XS
 
 
 
@@ -121,7 +150,7 @@ LIST_OF_DISENO.forEach( (e) => {
             console.log(event.target)
             PRECIO_DISENO = parseInt(event.target.getAttribute('precio'), 10) 
             SetPrecio();
-            SetPeso();
+            SetPeso(); 
         }    
 });
 })

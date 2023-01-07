@@ -102,6 +102,7 @@ const BICIS_URLS = {
     '000000100PL000' : webflowSrc +'cedb41ee83f762fac71c22_000000100PL000.png',
    
     //Camara1
+    // Vista de enfrente
     '010000000BR000' : 'https://uploads-ssl.webflow.com/6149043a3c69c4356cdb74b7/62d33b3249ba536048d3422b_010000000BR000.png',
     '010001100PU000' : 'https://uploads-ssl.webflow.com/6149043a3c69c4356cdb74b7/62d33b32d51c79146a2a18e3_010001100PU000.png',
     '010000000BL000' : 'https://uploads-ssl.webflow.com/6149043a3c69c4356cdb74b7/62d33b32d51c797bd32a18e2_010000000BL000.png',
@@ -143,6 +144,7 @@ const BICIS_URLS = {
     '010000011NA000' : 'https://uploads-ssl.webflow.com/6149043a3c69c4356cdb74b7/62d33b2119f62c9dbdd83dc3_010000011NA000.png',
     '010001111NA000' : 'https://uploads-ssl.webflow.com/6149043a3c69c4356cdb74b7/62d33b1949432be1200178d4_010001111NA000.png',
         //Camara 02
+        //Lanta trasera
     '020000011PL000' : 'https://uploads-ssl.webflow.com/6149043a3c69c4356cdb74b7/62d33de5d51c79e0762a30b5_020000011PL000.png',
     '020000011BR000' : 'https://uploads-ssl.webflow.com/6149043a3c69c4356cdb74b7/62d33de734f1822c01972a0a_020000011BR000.png',
     '020000111BL000' : 'https://uploads-ssl.webflow.com/6149043a3c69c4356cdb74b7/62d33de77fcc9cc95e8e1dd8_020000111BL000.png',
@@ -339,6 +341,7 @@ const BICIS_URLS = {
     '060000011NA000':webflowSrc +'d037a27078433b35d735dd_060000011NA000.png',
     '060000100NA000': 'https://uploads-ssl.webflow.com/6149043a3c69c4356cdb74b7/62d037c4e8bbdf892f1d9b76_060000100NA000.png',
     
+    // Bravo logo + asiento + frame
     '000001112PL000' : 'https://uploads-ssl.webflow.com/6149043a3c69c4356cdb74b7/62dac5bc3511c664cfdc7884_000001112PL000.png',
     '000001112NA000' : 'https://uploads-ssl.webflow.com/6149043a3c69c4356cdb74b7/62dac5b980b766f99663681c_000001112NA000.png',
     '000001112BL000' : 'https://uploads-ssl.webflow.com/6149043a3c69c4356cdb74b7/62dac5b94b3f6d6cc4ceab8c_000001112BL000.png',
