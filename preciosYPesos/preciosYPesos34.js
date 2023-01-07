@@ -54,7 +54,7 @@ frameSetChecBoxPP.addEventListener('change', (e)=>{
             var bubblePrecio = PESO_FRAMESET;
             innerPeso.innerText =  bubblePrecio/1000 + ' Kg'
             innerPesoM.innerText = bubblePrecio/1000 + ' Kg'
-        } else if (frame_set_chk = false){
+        } else {
             var bubble = PRECIO_FRAMESET + PRECIO_GRUPO + PRECIO_RUEDOS + PRECIO_MANUBRIO + PRECIO_BASE + PRECIO_DISENO + PRECIO_TAMANO;
             bubble = formatMoney(bubble)
             innerPrecio.innerText = '$' + bubble
