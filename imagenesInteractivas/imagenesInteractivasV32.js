@@ -248,23 +248,18 @@ const BICIS_URLS = {
 /* -------------- Radio Buttons Inputs -------------- */  
 
 // Manubrios
-
 $('input[name="manubrio"]').click(function(){
     manubrioFinal = this.value;
-    // MIN_IMAGE();    
-    // CAMBIAR_A_GIF();
-    // CambiarImagen();
-    // CambiarImagenManubrio()
-    if (manubrioFinal == 1){
-        manubrioImg1.src =BICIS_URLS[('220000100NA000')]
 
-        manubrioImgMobile1.src =BICIS_URLS[('220000100NA000')]
-    } else if (manubrioFinal == 0){
-        manubrioImg1.src =BICIS_URLS[('210000100NA000')]
+    // if (manubrioFinal == 1){
+    //     manubrioImg1.src =BICIS_URLS[('220000100NA000')]
 
-        manubrioImgMobile1.src =BICIS_URLS[('210000100NA000')]
-    }
-    // MAX_IMAGE();    
+    //     manubrioImgMobile1.src =BICIS_URLS[('220000100NA000')]
+    // } else if (manubrioFinal == 0){
+    //     manubrioImg1.src =BICIS_URLS[('210000100NA000')]
+
+    //     manubrioImgMobile1.src =BICIS_URLS[('210000100NA000')]
+    // }
 });
 
 
@@ -291,15 +286,20 @@ $('input[name="rines"]').click( function(){
     if (rinesFinal == 1){
         ruedos1.src =BICIS_URLS[('110001000NA000')]
         ruedos2.src = BICIS_URLS[('130000100NA000')]
+        manubrioImg1.src =BICIS_URLS[('220000100NA000')]
 
+        
         ruedos1Mobile.src =BICIS_URLS[('110001000NA000')]
         ruedos2Mobile.src = BICIS_URLS[('130000100NA000')]
+        manubrioImgMobile1.src =BICIS_URLS[('220000100NA000')]
     } else if (rinesFinal == 0){
         ruedos1.src =BICIS_URLS[('120000000NA000')]
         ruedos2.src = BICIS_URLS[('140000100NA000')]
+        manubrioImg1.src =BICIS_URLS[('210000100NA000')]
 
         ruedos1Mobile.src =BICIS_URLS[('120000000NA000')]
         ruedos2Mobile.src = BICIS_URLS[('140000100NA000')]
+        manubrioImgMobile1.src =BICIS_URLS[('210000100NA000')]
     }
     // MAX_IMAGE();
 });   
@@ -437,31 +437,27 @@ function CambiarImagen(){
 
 function CambiarImagenColor(){
     CODEIMG = '000000' + baseFinal + estiloFinal + disenoFinal + colorFinal + '000'
-    console.log(CODEIMG)
+
     imagen.src = BICIS_URLS[(CODEIMG)]
+
     imagenMobile.src = BICIS_URLS[(CODEIMG)]
 };
 
 function CambiarImagenRuedos(){
     CODE_R = '000000' + baseFinal + estiloFinal + disenoFinal + colorFinal + '000'
 
-    console.log(CODER)
     ruedos1.src =BICIS_URLS[(CODE_R)]
     ruedos2.src = BICIS_URLS[(CODE_R)]
-
  
     imagenMobile.src = BICIS_URLS[(CODER)]
-
 };
 
 function CambiarImagenManubrio(){
-
     CODE_M = '000000' + baseFinal + estiloFinal + disenoFinal + colorFinal + '000'
-
     console.log(CODE_M)
-  
+
     manubrioImg1.src = BICIS_URLS[(CODE_M)]
- 
+
     manubrioImgMobile1.src = BICIS_URLS[(CODE_M)]
 
 };
