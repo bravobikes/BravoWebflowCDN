@@ -185,7 +185,6 @@ const BICIS_URLS = {
     '000000100RO000':'https://uploads-ssl.webflow.com/6149043a3c69c4356cdb74b7/63a640f5e473f316f66931b4_Road-SB-Raw-Rose.webp',
     // 'Rose-classic-sb':
     '000000111RO000': 'https://uploads-ssl.webflow.com/6149043a3c69c4356cdb74b7/63a640f6a014a58e62eb552f_Road-SB-Sleeve-Rose.webp',
-    '000000111RO000': '',
     // 'Rose-sleeve-sb':
     '000000112RO000':'https://uploads-ssl.webflow.com/6149043a3c69c4356cdb74b7/63a640f16eb0c14311cc42ca_Road-SB-Classic-Rose.webp',
     // 'Rose-raw-br':
