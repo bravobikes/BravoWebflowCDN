@@ -37,8 +37,10 @@ let PRECIO_TAMANO = 0
 
 // Precio actualizado: 66540
 
-var myHeaders = new Headers();
-myHeaders.append("apikey", "OmFyRPoHXpFhKk8eDk6G8cpUGPj6pv4z");
+
+
+// var myHeaders = new Headers();
+// myHeaders.append("apikey", "OmFyRPoHXpFhKk8eDk6G8cpUGPj6pv4z");
 
 var requestOptions = {
   method: 'GET',
@@ -46,16 +48,7 @@ var requestOptions = {
   headers: myHeaders
 };
 
-var myHeaders = new Headers();
-myHeaders.append("apikey", "OmFyRPoHXpFhKk8eDk6G8cpUGPj6pv4z");
-
-var requestOptions = {
-  method: 'GET',
-  redirect: 'follow',
-  headers: myHeaders
-};
-
-fetch("https://api.apilayer.com/fixer/latest?symbols=mxn&base=usd", requestOptions)
+fetch("https://bravo-currency-conversion.s3.amazonaws.com/forex.txt", requestOptions)
   .then(function (response) {
 	// The API call was successful!
 	return response.json();
@@ -73,6 +66,25 @@ fetch("https://api.apilayer.com/fixer/latest?symbols=mxn&base=usd", requestOptio
   })
   /* .then(result => console.log(result)) */
   .catch(error => console.log('error', error));
+
+// fetch("https://api.apilayer.com/fixer/latest?symbols=mxn&base=usd", requestOptions)
+//   .then(function (response) {
+// 	// The API call was successful!
+// 	return response.json();
+//   })
+//   .then(function(result) {
+ 
+//     conv = result.rates.MXN;
+//     console.log("conv")
+//     console.log(conv)
+//     var temp = PRECIO_FRAMESET + PRECIO_GRUPO + PRECIO_RUEDOS + PRECIO_MANUBRIO + PRECIO_BASE + PRECIO_DISENO + PRECIO_TAMANO;
+//     PrecioUSD = formatMoney(temp/conv)
+    
+//     innerPrecio.innerText = PrecioUSD + ' USD'
+//     innerPrecioM.innerText= PrecioUSD + ' USD'
+//   })
+//   /* .then(result => console.log(result)) */
+//   .catch(error => console.log('error', error));
 
 
 // var bubble = PRECIO_FRAMESET + PRECIO_GRUPO + PRECIO_RUEDOS + PRECIO_MANUBRIO + PRECIO_BASE + PRECIO_DISENO + PRECIO_TAMANO;
