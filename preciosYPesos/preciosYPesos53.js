@@ -213,7 +213,7 @@ LIST_OF_DISENO.forEach( (e) => {
 function formatMoney(number) {
     // return number.toLocaleString('en-US');
 
-    number = number.substring(0, number.length - 4);
+    number = number.toString().substring(0, number.length - 4);
     number = number + "9.99"
     console.log(number)
 
