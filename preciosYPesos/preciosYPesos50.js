@@ -38,33 +38,46 @@ let PRECIO_TAMANO = 0
 // Precio actualizado: 66540
 
 
+// Temp Conversion rate
+conv = 18.50
+var temp = PRECIO_FRAMESET + PRECIO_GRUPO + PRECIO_RUEDOS + PRECIO_MANUBRIO + PRECIO_BASE + PRECIO_DISENO + PRECIO_TAMANO;
+PrecioUSD = formatMoney(temp/conv)
+    
+innerPrecio.innerText = PrecioUSD + ' USD'
+innerPrecioM.innerText= PrecioUSD + ' USD'
+
 
 // var myHeaders = new Headers();
 // myHeaders.append("apikey", "OmFyRPoHXpFhKk8eDk6G8cpUGPj6pv4z");
 
-// Test 2
-var requestOptions = {
-  method: 'GET'
-};
+// Test 2 - aws s3 not working
+// var requestOptions = {
+//   method: 'GET'
+// };
 
-fetch("https://bravo-currency-conversion.s3.amazonaws.com/forex.txt")
-  .then(function (response) {
-	// The API call was successful!
-	return response.json();
-  })
-  .then(function(result) {
+// fetch("https://bravo-currency-conversion.s3.amazonaws.com/forex.txt")
+//   .then(function (response) {
+// 	// The API call was successful!
+// 	return response.json();
+//   })
+//   .then(function(result) {
  
-    conv = result.rates.MXN;
-    console.log("conv")
-    console.log(conv)
-    var temp = PRECIO_FRAMESET + PRECIO_GRUPO + PRECIO_RUEDOS + PRECIO_MANUBRIO + PRECIO_BASE + PRECIO_DISENO + PRECIO_TAMANO;
-    PrecioUSD = formatMoney(temp/conv)
+//     conv = result.rates.MXN;
+//     console.log("conv")
+//     console.log(conv)
+//     var temp = PRECIO_FRAMESET + PRECIO_GRUPO + PRECIO_RUEDOS + PRECIO_MANUBRIO + PRECIO_BASE + PRECIO_DISENO + PRECIO_TAMANO;
+//     PrecioUSD = formatMoney(temp/conv)
     
-    innerPrecio.innerText = PrecioUSD + ' USD'
-    innerPrecioM.innerText= PrecioUSD + ' USD'
-  })
-  /* .then(result => console.log(result)) */
-  .catch(error => console.log('error', error));
+//     innerPrecio.innerText = PrecioUSD + ' USD'
+//     innerPrecioM.innerText= PrecioUSD + ' USD'
+//   })
+//   /* .then(result => console.log(result)) */
+//   .catch(error => console.log('error', error));
+
+
+
+
+// test 1 - fixer api working
 
 // fetch("https://api.apilayer.com/fixer/latest?symbols=mxn&base=usd", requestOptions)
 //   .then(function (response) {
@@ -199,6 +212,11 @@ LIST_OF_DISENO.forEach( (e) => {
 
 function formatMoney(number) {
     // return number.toLocaleString('en-US');
+
+    number = number.substring(0, num.length - 4);
+    number = number + "9.99"
+
+
     return number.toLocaleString('en-US', { style: 'currency', currency: 'USD' })
   }
 
