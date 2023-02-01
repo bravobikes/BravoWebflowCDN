@@ -194,8 +194,9 @@ LIST_OF_DISENO.forEach( (e) => {
 
 function formatMoney(number) {
     // return number.toLocaleString('en-US');
-
+    console.log(number)
     number = number.toString().substring(0, number.length - 4);
+    console.log(number)
     number = number + "9.99"
     console.log(number)
 
