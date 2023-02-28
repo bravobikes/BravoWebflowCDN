@@ -120,7 +120,8 @@ $('input[name="irACheckout"]').click(function(){
 
 
 
-  {/* <script>
+//   { 
+      /* <script>
     var options = options || {};
     options["FORM CLASS NAME"] = {};
     options["FORM CLASS NAME"]["SELECT CLASS NAME"] = "CMS FIELD";
@@ -233,7 +234,8 @@ $('input[name="irACheckout"]').click(function(){
     $('#PL').click(function(){
           $('#option-set-6498b455feb4015a4d504ac123e07fe7 :nth-child(4)').trigger('click');
   
-    }); */}
+    }); */
+// }
   // $('#irACheckout').click(function(){
   //    try{$('.removeproduct').trigger('click')}catch{console.log('No hay productos')}
   // 	setTimeout(() => {
@@ -256,5 +258,3 @@ $('input[name="irACheckout"]').click(function(){
   
   // Ultegra
   // 634c7c19feb1d66de8938d65
-  
-  
