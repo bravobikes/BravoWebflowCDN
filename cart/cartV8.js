@@ -15,7 +15,7 @@ $('input[name="rines"]').click( function(){
 
 // Click on Checkout button
 $('#irACheckout').click(function(){
-    if (frameSetChecBox.value == true){
+    if (frame_set_chk == true){
         console.log("checkbox true")
 
         // Add only Frame
