@@ -14,7 +14,7 @@ $('input[name="rines"]').click( function(){
 });       
 
 // Click on Checkout button
-$('input[name="irACheckout"]').click(function(){
+$('#irACheckout').click(function(){
     if (frameSetCheckBox == true){
         console.log("checkbox true")
 
@@ -61,7 +61,7 @@ $('input[name="irACheckout"]').click(function(){
 })
 
 // Remove items from cart
-$('#irACheckout').click(function() {
+$('#close-cart-button').click(function() {
 	$('.w-commerce-commercecartitem a').each(function() {
     $(this).click(function() {
            this.click();
