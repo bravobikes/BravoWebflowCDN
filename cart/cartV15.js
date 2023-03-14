@@ -121,7 +121,9 @@ $('input[name="rines"]').click( function(){
 // Click on Checkout button
 $('#irACheckout').click(function(){
     if (frame_set_chk == true){
-        console.log("checkbox true")
+        // console.log("checkbox true")
+
+        // Add to cart Cuadro 
         $('.add-to-cart-button-cuadro').trigger('click');
 
 
@@ -148,11 +150,13 @@ $('#irACheckout').click(function(){
         // }
        
     } else {
-        console.log("checkbox false")
+        // console.log("checkbox false")
         
+        // Add to cart Cuadro 
+        $('.add-to-cart-button-cuadro').trigger('click');
+
         // Add to cart acabados
         $('.add-to-cart-acabados').trigger('click');
-        $('.add-to-cart-button-cuadro').trigger('click');
 
 
 
