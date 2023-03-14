@@ -1,3 +1,18 @@
+const LIST_OF_SIZEBIKE = Object.values($('input[name="sizeBike"]')).splice(0,6)
+const LIST_OF_BIKETYPE = Object.values($('input[name="ESTILO"]')).splice(0,3)
+
+
+// Default value tamaño de cuadro
+CuadroRuta = XS
+$('#option-set-36f477ffcc77809c3424e746653bfbf0 :eq(8)').trigger('click');    
+CuadroType = allrounder
+$('#option-set-36f477ffcc77809c3424e746653bfbf0 :eq(8)').trigger('click');               
+baseFinal = 1
+v = 2
+         
+
+
+
 //Base
 $('input[name="base"]').click( function(){
     baseFinal = this.value;
@@ -39,12 +54,51 @@ $('input[name="color"]').click( function(){
 
 });
 
-// Default value tamaño de cuadro
-CuadroRuta = XS
+
 
 LIST_OF_SIZEBIKE.forEach( (e) => {
     e.addEventListener('change', (event) => {
         CuadroRuta = e.id
+
+        if (CuadroRuta == "XS"){
+            // xs
+            $('#option-set-36f477ffcc77809c3424e746653bfbf0 :eq(8)').trigger('click');              
+        } else if (CuadroRuta == "S"){
+            // s
+            $('#option-set-36f477ffcc77809c3424e746653bfbf0 :eq(1)').trigger('click');
+        } else if (CuadroRuta == "M") {
+            // m
+            $('#option-set-36f477ffcc77809c3424e746653bfbf0 :eq(2)').trigger('click'); 
+        } else if (CuadroRuta == "ML") {
+            // ml
+            $('#option-set-36f477ffcc77809c3424e746653bfbf0 :eq(10)').trigger('click'); 
+        } else if (CuadroRuta == "L") {
+            // l
+            $('#option-set-36f477ffcc77809c3424e746653bfbf0 :eq(4)').trigger('click'); 
+        } else if (CuadroRuta == "XL"){
+            // xl
+            $('#option-set-36f477ffcc77809c3424e746653bfbf0 :eq(6)').trigger('click'); 
+
+
+        }
+});
+})
+
+// Cuadro Type
+LIST_OF_BIKETYPE.forEach( (e) => {
+    e.addEventListener('change', (event) => {
+        CuadroType = e.id
+
+        if (CuadroType == "endurance"){
+            // xs
+            $('#option-set-36f477ffcc77809c3424e746653bfbf0 :eq(8)').trigger('click');              
+        } else if (CuadroType == "allrounder"){
+            // s
+            $('#option-set-36f477ffcc77809c3424e746653bfbf0 :eq(1)').trigger('click');
+        } else if (CuadroType == "race") {
+            // m
+            $('#option-set-36f477ffcc77809c3424e746653bfbf0 :eq(2)').trigger('click'); 
+        } 
 });
 })
 
@@ -122,31 +176,23 @@ $('#irACheckout').click(function(){
 
             
        
-                if (groupsetFinal == 0) {
-                    if (rinesFinal == 0){
-                        if (manubrioFinal == 0) {
-                            $('.add-to-cart-g1lama').trigger('click');
-                        } else if (manubrioFinal == 1) {
-                            $('.add-to-cart-g1lamc').trigger('click');
-                        }
+            if (groupsetFinal == 0) {
+                if (rinesFinal == 0){
+                    if (manubrioFinal == 0) {
+                        $('.add-to-cart-g1lama').trigger('click');
+                    } else if (manubrioFinal == 1) {
+                        $('.add-to-cart-g1lamc').trigger('click');
+                    }
 
-                    } else if (rinesFinal == 1){
-                        if (manubrioFinal == 0) {
-                            $('.add-to-cart-g1lcma').trigger('click');
-                        } else if (manubrioFinal == 1) {
-                            $('.add-to-cart-g1lcmc').trigger('click');
-                        }
-                    }  
-                        
-                } 
-                // else if (groupsetFinal == 1) {
-                //     if (rinesFinal == 0){
-                       
-                //     } else if (rinesFinal == 1){
-
-                //     }      
-
-                // }
+                } else if (rinesFinal == 1){
+                    if (manubrioFinal == 0) {
+                        $('.add-to-cart-g1lcma').trigger('click');
+                    } else if (manubrioFinal == 1) {
+                        $('.add-to-cart-g1lcmc').trigger('click');
+                    }
+                }                      
+            } 
+            
 
             
         // Add Finish
@@ -205,3 +251,35 @@ $('#close-cart-button').click(function() {
 
 // // Morado
 // $('#option-set-6498b455feb4015a4d504ac123e07fe7 :eq(8)').trigger('click'); 
+
+
+    // Blue
+    // BL
+    
+    // Bronze
+    // BR
+   
+    // Gold
+    // GO
+     
+    // Green
+    // GR
+   
+    // Platinum
+    // PL
+    
+    // Purple
+    // PU
+    
+    // Rose
+    // RO
+   
+    // Teal
+    // TE
+   
+    // Violet
+    // VI
+    
+    // None
+    // NA
+   
