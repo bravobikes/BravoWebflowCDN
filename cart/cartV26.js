@@ -227,8 +227,17 @@ $('input[name="color"]').click( function(){
 // Click on Checkout button
 $('#irACheckout').click(function(){
     if (frame_set_chk == true){
-
+        
+        // Add to cart Cuadro 
         $('.add-to-cart-button-cuadro').trigger('click');
+
+        // add to cart brushed
+        if (baseFinal == 0){
+            $('.add-to-cart-acabados').trigger('click');
+        // add to cart sandblasted
+        } else if (baseFinal ==1){
+            $('.add-to-cart-acabados').trigger('click');
+        }
 
        
     } else {
