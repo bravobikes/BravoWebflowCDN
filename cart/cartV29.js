@@ -198,6 +198,10 @@ $('input[name="color"]').click( function(){
 
 // Click on Checkout button
 $('#irACheckout').click(function(){
+    $('.removeproduct').trigger('click');
+
+
+
     if (frame_set_chk == true){
         
         // Add to cart Cuadro 
@@ -239,12 +243,12 @@ $('#irACheckout').click(function(){
     }
 })
 
-// Is cart open
-isHidden = $(closecartbutton).is(':visible')
+// // Is cart open
+// isHidden = $(closecartbutton).is(':visible')
 
-if (isHidden == false){
-    $('.removeproduct').trigger('click');
-} 
+// if (isHidden == false){
+//     $('.removeproduct').trigger('click');
+// } 
 // Remove items from cart
 // $('#close-cart-button').click(function() {
 //     $('.removeproduct').trigger('click');
