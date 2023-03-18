@@ -1,28 +1,5 @@
-// const LIST_OF_SIZEBIKE = Object.values($('input[name="sizeBike"]')).splice(0,6)
 const LIST_OF_BIKETYPE = Object.values($('input[name="ESTILO"]')).splice(0,3)
 
-
-// Default value tamaño de cuadro
-
-// var CuadroRuta = XS
-$('#option-set-36f477ffcc77809c3424e746653bfbf0 :eq(8)').trigger('click');    
-console.log("Click Cuadro Ruta")
-// var CuadroType = allrounder
-$('#option-set-44ab38aa9ec3274b93476adb8a90137d :eq(2)').trigger('click');     
-console.log("Click Cuadro Type")
-
-// 105
-$('#option-set-8b0874b3c1eb6f928fccda8875ef7e5b :eq(0)').trigger('click'); 
-
-// Llantas Aluminio
-$('#option-set-010268edf9c5a7a711de03ee2b2d5247 :eq(0)').trigger('click'); 
-
-// Manubrio Aluminio
-$('#option-set-86ceabcd24d69345c43f8fbea81df71a :eq(0)').trigger('click'); 
-
-baseFinal = 1
-v = 2
-         
 
 LIST_OF_SIZEBIKE.forEach( (e) => {
     e.addEventListener('change', (event) => {
@@ -155,12 +132,7 @@ $('input[name="diseno"]').click( function(){
         // sandblasted
         $('#option-set-36fcfacf2c4b0114bbb751a1680cf542 :eq(0)').trigger('click'); 
 
-
-
     }
-
-    CambiarImagenColor()
-
 });
 
 //Color
@@ -262,94 +234,20 @@ $('#irACheckout').click(function(){
         } else if (baseFinal ==1){
             $('.add-to-cart-acabados-s').trigger('click');
         }
-            
-
-            
-        // Add Finish
-        
+    
         // Add Engravings
     }
 })
 
-// Remove items from cart
-$('#close-cart-button').click(function() {
+// Is cart open
+isHidden = $(closecartbutton).is(':visible')
+
+if (isHidden == true){
     $('.removeproduct').trigger('click');
-// 	$('.w-commerce-commercecartitem a').each(function() {
-//     $(this).click(function() {
-//            this.click();
-//         }).click()
-//   });
-})
+} 
+// Remove items from cart
+// $('#close-cart-button').click(function() {
+//     $('.removeproduct').trigger('click');
 
+// })
 
-
-// // 
-// // 
-// // 
-// // Brushed
-// $('#option-set-473f0c4507fc8a3611c1c56eec28b196 :eq(1)').trigger('click'); 
-
-
-// // Sanblasted
-// $('#option-set-473f0c4507fc8a3611c1c56eec28b196 :eq(2)').trigger('click'); 
-
-
-
-
-// // Rombos
-// $('#option-set-e55da3ee4cafe7733d9e69f26fd2889f :eq(1)').trigger('click'); 
-
-// // Invertidos
-// $('#option-set-e55da3ee4cafe7733d9e69f26fd2889f :eq(2)').trigger('click'); 
-
-// // None
-// $('#option-set-e55da3ee4cafe7733d9e69f26fd2889f :eq(4)').trigger('click'); 
-
-
-
-// // Neutral
-// $('#option-set-6498b455feb4015a4d504ac123e07fe7 :eq(1)').trigger('click'); 
-
-// // azul
-// $('#option-set-6498b455feb4015a4d504ac123e07fe7 :eq(2)').trigger('click'); 
-
-// // Cobre
-// $('#option-set-6498b455feb4015a4d504ac123e07fe7 :eq(4)').trigger('click'); 
-
-// // Platino
-// $('#option-set-6498b455feb4015a4d504ac123e07fe7 :eq(6)').trigger('click'); 
-
-// // Morado
-// $('#option-set-6498b455feb4015a4d504ac123e07fe7 :eq(8)').trigger('click'); 
-
-
-    // Blue
-    // BL
-    
-    // Bronze
-    // BR
-   
-    // Gold
-    // GO
-     
-    // Green
-    // GR
-   
-    // Platinum
-    // PL
-    
-    // Purple
-    // PU
-    
-    // Rose
-    // RO
-   
-    // Teal
-    // TE
-   
-    // Violet
-    // VI
-    
-    // None
-    // NA
-   
