@@ -244,36 +244,18 @@ $('#irACheckout').click(function(){
 
 
 CartWrapper.addEventListener("click", function() {
-    console.log("aa")
-    console.log(cartempty)
-    if (cartempty == false){
-        console.log("bb")
-        $('.removeproduct').trigger('click');
-        var cartempty = true
-    }
+    removeproduct();
   });
+
+  // Remove items from cart
+$('#close-cart-button').click(function() {
+    removeproduct();
+
+})
 
 function removeproduct(){
     if (cartempty == false){
-        console.log("bb")
         $('.removeproduct').trigger('click');
         var cartempty = true
     }
 }
-
-//   CartWrapper.addEventListener("click",(event) =>{
-//     console.log("aa")
-//     console.log(cartempty)
-//     if (cartempty == false){
-//         console.log("bb")
-//         $('.removeproduct').trigger('click');
-//         var cartempty = true
-//     }
-//   });
-
-//   CartWrapper.addEventListener("click", function() {
-    
-//     $('.removeproduct').trigger('click');
- 
-    
-//   }, {once : true});
