@@ -240,10 +240,6 @@ $('#irACheckout').click(function(){
     }
 })
 
-// $('#closecartbutton').click( function(){
-//     $('.removeproduct').trigger('click');
-//     console.log("close")
-// });
 var cartempty = true
 const CartWrapper = document.getElementById('Cart_Wrapper')
 
