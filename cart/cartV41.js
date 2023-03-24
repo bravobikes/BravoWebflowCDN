@@ -206,7 +206,7 @@ $('#irACheckout').click(function(){
         }catch{console.log('No hay productos')}
     // try{$('.removeproduct').trigger('click')}catch{console.log('No hay productos')}
 
-    setTimeout(() => {
+    // setTimeout(() => {
             if (frame_set_chk == true){
                 // Add to cart Cuadro 
                 $('.add-to-cart-button-cuadro').trigger('click');
@@ -247,7 +247,7 @@ $('#irACheckout').click(function(){
                 // Add Engravings
                 }
 
-               }, 100);
+            //    }, 100);
                 
              });
 
@@ -261,12 +261,12 @@ $('#irACheckout').click(function(){
 //   });
 
   // Remove items from cart
-$('#close-cart-button').click(function() {
-    // removeproduct();
-    $('.removeproduct').trigger('click');
+// $('#close-cart-button').click(function() {
+//     // removeproduct();
+//     $('.removeproduct').trigger('click');
 
 
-})
+// })
 
 // function removeproduct(){
 //     console.log(cartempty)
