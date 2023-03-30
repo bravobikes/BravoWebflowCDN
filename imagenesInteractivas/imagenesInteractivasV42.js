@@ -1,3 +1,5 @@
+// Usar Imagenes Interactivas 41
+
 //Constantes
 const coloresArray = ['NA', 'BL', 'BR', 'PL', 'PU']
 
