@@ -40,7 +40,7 @@ let PRECIO_DISENO = 0
 
 // Temp Conversion rate
 conv = 18.50
-var temp =  PRECIO_GRUPO + PRECIO_RUEDOS + PRECIO_MANUBRIO + PRECIO_BASE + PRECIO_DISENO + PRECIO_TAMANO;
+var temp =  PRECIO_FRAMESET + PRECIO_GRUPO + PRECIO_RUEDOS + PRECIO_MANUBRIO + PRECIO_BASE + PRECIO_DISENO;
 PrecioUSD = formatMoney(temp/conv)
 console.log(PrecioUSD)
 innerPrecio.innerText = PrecioUSD + ' USD'
@@ -106,11 +106,11 @@ frameSetChecBoxPP.addEventListener('change', (e)=>{
             innerPeso.innerText =  bubblePeso/1000 + ' Kg'
             innerPesoM.innerText = bubblePeso/1000 + ' Kg'
         } else {
-            var bubble = PRECIO_FRAMESET + PRECIO_GRUPO + PRECIO_RUEDOS + PRECIO_MANUBRIO + PRECIO_BASE + PRECIO_DISENO + PRECIO_TAMANO;
+            var bubble = PRECIO_FRAMESET + PRECIO_GRUPO + PRECIO_RUEDOS + PRECIO_MANUBRIO + PRECIO_BASE + PRECIO_DISENO;
             PrecioUSD = formatMoney(bubble/conv)
             innerPrecio.innerText = PrecioUSD + ' USD'
             innerPrecioM.innerText= PrecioUSD + ' USD'
-            var bubblePeso = PESO_FRAMESET + PESO_GRUPO + PESO_RUEDOS + PESO_MANUBRIO + PRECIO_TAMANO;
+            var bubblePeso = PESO_FRAMESET + PESO_GRUPO + PESO_RUEDOS + PESO_MANUBRIO;
             innerPeso.innerText =  bubblePeso/1000 + ' Kg'
             innerPesoM.innerText = bubblePeso/1000 + ' Kg'
         }
