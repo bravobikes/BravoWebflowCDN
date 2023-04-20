@@ -248,7 +248,7 @@ CartWrapper.addEventListener("click", function() {
     // console.log("Cart Wrapper")
 
     isHidden = $(closecartbutton2).is(':visible')
-    console.log(isHidden)
+    // console.log(isHidden)
     if (isHidden == true){
         // $('.removeproduct').trigger('click');
         $("[data-wf-cart-action=remove-item]").each(function () {
@@ -261,7 +261,7 @@ CartWrapper.addEventListener("click", function() {
 
 //   Remove items from cart
 $('#close-cart-button2').click(function() {
-    console.log("click close cart ")
+    // console.log("click close cart ")
     // $('.removeproduct').trigger('click');
     $("[data-wf-cart-action=remove-item]").each(function () {
         // click the underlaying html element, not the jquery object
