@@ -1,6 +1,7 @@
 const LIST_OF_BIKETYPE = Object.values($('input[name="ESTILO"]')).splice(0,3)
 // var cartempty = true
 const CartWrapper = document.getElementById('cart_wrapper2')
+runOnce === true
 
 LIST_OF_SIZEBIKE.forEach( (e) => {
     e.addEventListener('change', (event) => {
@@ -199,6 +200,7 @@ $('input[name="color"]').click( function(){
 
 // Click on Checkout button
 $('#irACheckout').click(function(){
+    runOnce === false
     // console.log("remove product in cart")
     // $("[data-wf-cart-action=remove-item]").each(function () {
     //     // click the underlaying html element, not the jquery object
@@ -250,7 +252,7 @@ $('#irACheckout').click(function(){
 CartWrapper.onclick = function(){
     console.log("Cart Wrapper")
 
-  
+    removeproduct()
     $("[data-wf-cart-action=remove-item]").each(function () {
             // click the underlaying html element, not the jquery object
             $(this)[0].click();
@@ -259,25 +261,30 @@ CartWrapper.onclick = function(){
     // }    
 };
 
-$('input[name="CartWrapper"]').click( function(){
-    console.log("test")
-});
+function removeremoveproduct() {
+    if (runOnce === false) {
+        $("[data-wf-cart-action=remove-item]").each(function () {
+            // click the underlaying html element, not the jquery object
+            $(this)[0].click();
+    })
+    }
+    runOnce === true
+}
 
-CartWrapper.addEventListener("click", function() {
-    //     console.log("Cart Wrapper")
-})
+
+
     
-// CartWrapper.addEventListener("click", function() {
-//     console.log("Cart Wrapper")
+CartWrapper.addEventListener("click", function() {
+    console.log("Cart Wrapper")
 
   
-//     $("[data-wf-cart-action=remove-item]").each(function () {
-//             // click the underlaying html element, not the jquery object
-//             $(this)[0].click();
-//     });
-//         // document.location.reload(true)
-//     // }   
-//   }, { once: true })
+    $("[data-wf-cart-action=remove-item]").each(function () {
+            // click the underlaying html element, not the jquery object
+            $(this)[0].click();
+    });
+        // document.location.reload(true)
+    // }   
+  }, { once: true })
   
 // CartWrapper.addEventListener("click", function() {
 //     console.log("Cart Wrapper")
