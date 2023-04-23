@@ -247,23 +247,44 @@ $('#irACheckout').click(function(){
 })
 
     
-
-
-
-CartWrapper.addEventListener("click", function() {
+CartWrapper.onclick = function(){
     console.log("Cart Wrapper")
 
-    // isHidden = $(closecartbutton2).is(':visible')
-    // console.log(isHidden)
-    // if (isHidden == true){
-        // $('.removeproduct').trigger('click');
-        $("[data-wf-cart-action=remove-item]").each(function () {
+  
+    $("[data-wf-cart-action=remove-item]").each(function () {
             // click the underlaying html element, not the jquery object
             $(this)[0].click();
-        });
+    });
         // document.location.reload(true)
-    // }   
-  }, { once: true })
+    // }    
+};
+
+// CartWrapper.addEventListener("click", function() {
+//     console.log("Cart Wrapper")
+
+  
+//     $("[data-wf-cart-action=remove-item]").each(function () {
+//             // click the underlaying html element, not the jquery object
+//             $(this)[0].click();
+//     });
+//         // document.location.reload(true)
+//     // }   
+//   }, { once: true })
+  
+// CartWrapper.addEventListener("click", function() {
+//     console.log("Cart Wrapper")
+
+//     // isHidden = $(closecartbutton2).is(':visible')
+//     // console.log(isHidden)
+//     // if (isHidden == true){
+//         // $('.removeproduct').trigger('click');
+//         $("[data-wf-cart-action=remove-item]").each(function () {
+//             // click the underlaying html element, not the jquery object
+//             $(this)[0].click();
+//         });
+//         // document.location.reload(true)
+//     // }   
+//   }, { once: true })
 
 // //   Remove items from cart
 // $('#close-cart-button2').click(function() {
