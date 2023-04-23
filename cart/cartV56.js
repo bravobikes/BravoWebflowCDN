@@ -199,10 +199,13 @@ $('input[name="color"]').click( function(){
 
 // Click on Checkout button
 $('#irACheckout').click(function(){
+    console.log("remove product in cart")
     $("[data-wf-cart-action=remove-item]").each(function () {
         // click the underlaying html element, not the jquery object
         $(this)[0].click();
     });
+    setTimeout(1000);
+    console.log("Add product in cart")
     if (frame_set_chk == true){
         // Add to cart Cuadro 
         $('.add-to-cart-button-cuadro').trigger('click');
