@@ -255,7 +255,21 @@ function Addtocart(){
         // Add Engravings
     }
 };
-  
+CartWrapper.addEventListener("close", function() {
+    console.log("Cart Wrapper")
+
+    // isHidden = $(closecartbutton2).is(':visible')
+    // console.log(isHidden)
+    // if (isHidden == true){
+        // $('.removeproduct').trigger('click');
+        $("[data-wf-cart-action=remove-item]").each(function () {
+            // click the underlaying html element, not the jquery object
+            $(this)[0].click();
+        });
+        // document.location.reload(true)
+    // }   
+  })
+
 // CartWrapper.addEventListener("click", function() {
 //     console.log("Cart Wrapper")
 
