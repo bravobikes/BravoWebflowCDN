@@ -1,6 +1,7 @@
 const LIST_OF_BIKETYPE = Object.values($('input[name="ESTILO"]')).splice(0,3)
 // var cartempty = true
 const CartWrapper = document.getElementById('cart_wrapper2')
+// const CartBitton = document.getElementById('close-cart-button')
 // var runOnce = true
 
 LIST_OF_SIZEBIKE.forEach( (e) => {
@@ -302,11 +303,13 @@ CartWrapper.addEventListener("close", function() {
 
 var observer = new MutationObserver(function(mutationsList, observer) {
     for (var mutation of mutationsList){
-        // if( )
-        $("[data-wf-cart-action=remove-item]").each(function () {
-            // click the underlaying html element, not the jquery object
-            $(this)[0].click();
-        });
+        if($(document.getElementById('close-cart-button2')).is(':visible') === false ){
+            $("[data-wf-cart-action=remove-item]").each(function () {
+                // click the underlaying html element, not the jquery object
+                $(this)[0].click();
+            });
+        }
+
     }
 });
 observer.observe(document.getElementById('cart_wrapper2'), { attributes: true});
