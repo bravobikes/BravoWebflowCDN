@@ -298,3 +298,15 @@ CartWrapper.addEventListener("close", function() {
 //     });
 //     // document.location.reload(true)
 // }, { once: true })
+
+
+var observer = new MutationObserver(function(mutationsList, observer) {
+    for (var mutation of mutationsList){
+        if( )
+        $("[data-wf-cart-action=remove-item]").each(function () {
+            // click the underlaying html element, not the jquery object
+            $(this)[0].click();
+        });
+    }
+});
+observer.observe(document.getElementById('cart_wrapper2'), { attributes: true});
