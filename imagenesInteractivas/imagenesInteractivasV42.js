@@ -372,7 +372,7 @@ function CambiarImagen(){
     // completeImg3.src = BICIS_URLS[("06" + CODE)]
     // completeImg4.src = BICIS_URLS[("00" + CODE)]
 
-    grupo1.src = BICIS_URLS[("02" + CODE)] https 
+    grupo1.src = BICIS_URLS[("02" + CODE)] 
     grupo2.src = BICIS_URLS[("02" + CODE)]
     ruedos1.src =BICIS_URLS[("06" + CODE)]
     ruedos2.src = BICIS_URLS[("03" + CODE)]
