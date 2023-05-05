@@ -33,10 +33,8 @@ function getDelivery() {
     
     var day = (arrayMeses[month] + " " + year)
 
-    // fechaEntrega.innerText = day
-    fechaEntrega.innerHTML = day
-    fechaEntrega.textContent = "test"
-    document.getElementById("fechaEntregaMobile").innerText = "test"
+    fechaEntrega.innerText = day
+    document.getElementById("fechaEntregaMobile").innerText = day
     
 
     console.log(day)
