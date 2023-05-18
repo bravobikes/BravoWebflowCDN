@@ -200,14 +200,14 @@ $('input[name="color"]').click( function(){
 
 
 // Click on Checkout button
-$('#irACheckout').click(function(){
+//$('#irACheckout').click(function(){
     
     // setTimeout(1500);
 
-    Addtocart()
+    //Addtocart()
 
     
-})
+//})
 
 function clearCart(){
     $("[data-wf-cart-action=remove-item]").each(function () {
@@ -295,7 +295,7 @@ function Addtocart(){
 // }, { once: true })
 
 
-/*var observer = new MutationObserver(function(mutationsList, observer) {
+var observer = new MutationObserver(function(mutationsList, observer) {
     for (var mutation of mutationsList){
         // console.log("Style change")
         // console.log($(document.getElementById('close-cart-button2')).is(':visible'))
@@ -308,4 +308,4 @@ function Addtocart(){
 
     }
 });
-observer.observe(document.getElementById('cart_wrapper2'), { attributes: true});*/
+observer.observe(document.getElementById('cart_wrapper2'), { attributes: true});
