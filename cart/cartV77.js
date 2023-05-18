@@ -209,12 +209,12 @@ $('#irACheckout').click(function(){
     
 })
 
-//function clearCart(){
-   // $("[data-wf-cart-action=remove-item]").each(function () {
+function clearCart(){
+    $("[data-wf-cart-action=remove-item]").each(function () {
         // click the underlaying html element, not the jquery object
-     //   $(this)[0].click();
-   // });
-//}
+        $(this)[0].click();
+    });
+}
 
 function Addtocart(){
     if (frame_set_chk == true){
@@ -295,7 +295,7 @@ function Addtocart(){
 // }, { once: true })
 
 
-var observer = new MutationObserver(function(mutationsList, observer) {
+/*var observer = new MutationObserver(function(mutationsList, observer) {
     for (var mutation of mutationsList){
         // console.log("Style change")
         // console.log($(document.getElementById('close-cart-button2')).is(':visible'))
@@ -308,4 +308,4 @@ var observer = new MutationObserver(function(mutationsList, observer) {
 
     }
 });
-observer.observe(document.getElementById('cart_wrapper2'), { attributes: true});
+observer.observe(document.getElementById('cart_wrapper2'), { attributes: true});*/
