@@ -209,12 +209,12 @@ $('#irACheckout').click(function(){
     
 })
 
-function clearCart(){
-    $("[data-wf-cart-action=remove-item]").each(function () {
+//function clearCart(){
+   // $("[data-wf-cart-action=remove-item]").each(function () {
         // click the underlaying html element, not the jquery object
-        $(this)[0].click();
-    });
-}
+     //   $(this)[0].click();
+   // });
+//}
 
 function Addtocart(){
     if (frame_set_chk == true){
