@@ -204,10 +204,10 @@ $('input[name="engraving"]').click(function(){
 
     if (engravingFinal == "0"){
         // Yes
-        $('#option-set-5f9971c1ef384760b92f0ca2093c81ce :eq(1)').trigger('click'); 
+        $('#option-set-5f9971c1ef384760b92f0ca2093c81ce :eq(0)').trigger('click'); 
     } else if (engravingFinal == "1") {
         // No
-        $('#option-set-5f9971c1ef384760b92f0ca2093c81ce :eq(0)').trigger('click'); 
+        $('#option-set-5f9971c1ef384760b92f0ca2093c81ce :eq(1)').trigger('click'); 
     }    
 
 })
