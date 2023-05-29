@@ -264,9 +264,6 @@ function Addtocart(){
 
         // Add to cart manubrio
         $('.add-to-cart-button-manubrio').trigger('click');
-        
-        // add to cart grabados
-        $('.add-to-cart-button-7').trigger('click');
 
         // add to cart brushed
         if (baseFinal == 0){
@@ -276,8 +273,10 @@ function Addtocart(){
         } else{
             $('.add-to-cart-acabados-s').trigger('click');
         }
-            
 
+        // add to cart grabados
+        $('.add-to-cart-button-7').trigger('click');
+            
         //if (document.getElementById('inicialesCheckbox').checked == true){
             //$('#AddToCartEngraving').trigger('click')
        // }
