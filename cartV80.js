@@ -36,13 +36,13 @@ LIST_OF_BIKETYPE.forEach( (e) => {
         CuadroType = e.id
 
         if (CuadroType == "endurance"){
-            // Endurance
+            // xs
             $('#option-set-44ab38aa9ec3274b93476adb8a90137d :eq(1)').trigger('click');               
         } else if (CuadroType == "allrounder"){
-            // All Rounder
+            // s
             $('#option-set-44ab38aa9ec3274b93476adb8a90137d :eq(2)').trigger('click');               
         } else if (CuadroType == "race") {
-            // Race
+            // m
             $('#option-set-44ab38aa9ec3274b93476adb8a90137d :eq(4)').trigger('click');               
         } 
 });
@@ -197,38 +197,17 @@ $('input[name="color"]').click( function(){
 
 });
 
-// Engraving
-$('input[name="engraving"]').click(function(){
-    engravingFinal = this.value;
-    console.log("engravingFinal: " + engravingFinal)
-
-    if (engravingFinal == "0"){
-        // Yes
-        $('#option-set-5f9971c1ef384760b92f0ca2093c81ce :eq(0)').trigger('click'); 
-    } else if (engravingFinal == "1") {
-        // No
-        $('#option-set-5f9971c1ef384760b92f0ca2093c81ce :eq(2)').trigger('click'); 
-    }    
-
-})
-
 
 
 // Click on Checkout button
-//$('#irACheckout').click(function(){
+$('#irACheckout').click(function(){
     
     // setTimeout(1500);
 
-    //Addtocart()
+    Addtocart()
 
     
-//})
-
-var addToCartButton = document.getElementById('button-2');
-addToCartButton.addEventListener('click', function() {
-  // Call the AddToCart function when the button is clicked
-  AddToCart();
-});
+})
 
 function clearCart(){
     $("[data-wf-cart-action=remove-item]").each(function () {
@@ -237,37 +216,56 @@ function clearCart(){
     });
 }
 
-function Addtocart() {
-    // Add to cart Cuadro
-    $('.add-to-cart-button-cuadro').trigger('click');
+function Addtocart(){
+    if (frame_set_chk == true){
+        // Add to cart Cuadro 
+        $('.add-to-cart-button-cuadro').trigger('click');
 
-    // Add to cart groupset
-    $('.add-to-cart-grupo').trigger('click');
+        // add to cart brushed
+        if (baseFinal == 0){
+            $('.add-to-cart-acabados-b').trigger('click');
+        // add to cart sandblasted
+        } else if (baseFinal ==1){
+            $('.add-to-cart-acabados-s').trigger('click');
+        }
 
-    // Add to cart llantas
-    $('.add-to-cart-llantas').trigger('click');
+        if (document.getElementById('inicialesCheckbox').checked == true){
+            $('#AddToCartEngraving').trigger('click')
+        }
 
-    // Add to cart manubrio
-    $('.add-to-cart-button-manubrio').trigger('click');
+        cartempty = false
 
-    // Add to cart engraving
-    $('.add-to-cart-button-engraving').trigger('click');
-
-    // Add to cart brushed or sandblasted
-    if (baseFinal == 0) {
-        $('.add-to-cart-acabados-b').trigger('click');
+       
     } else {
-        $('.add-to-cart-acabados-s').trigger('click');
+    
+        // Add to cart Cuadro 
+        $('.add-to-cart-button-cuadro').trigger('click');
+
+        // Add to cart groupset
+        $('.add-to-cart-grupo').trigger('click');
+
+        // Add to cart llantas
+        $('.add-to-cart-llantas').trigger('click');
+
+        // Add to cart manubrio
+        $('.add-to-cart-button-manubrio').trigger('click');
+
+        // add to cart brushed
+        if (baseFinal == 0){
+            $('.add-to-cart-acabados-b').trigger('click');
+
+        // add to cart sandblasted
+        } else{
+            $('.add-to-cart-acabados-s').trigger('click');
+        }
+
+
+        //if (document.getElementById('inicialesCheckbox').checked == true){
+            //$('#AddToCartEngraving').trigger('click')
+       // }
+        // Add Engravings
     }
-
-    // Uncomment the following lines if you want to add Engravings
-    // if (engravingFinal == "0") {
-    //     $('#AddToCartEngraving').trigger('click');
-    // }
-}
-
-
-
+};
 // 
 
 // CartWrapper.addEventListener("click", function() {
