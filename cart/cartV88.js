@@ -238,19 +238,19 @@ $('input[name="color"]').click( function(){
 
 // Al seleccionar opción en frontend, trigger la opción en las variantes
 // ENGRAVING: Yes or No
-LIST_OF_ENGRAVING.forEach( (e) => {
-    e.addEventListener('change', (event) => {
-        grabados = e.id
+$('input[name="engraving"]').click(function(){
+    engravingFinal = this.value;
+    console.log("engravingFinal: " + engravingFinal)
 
-        if (grabados == "Yes"){
-            // Yes
-            $('#option-set-5f9971c1ef384760b92f0ca2093c81ce :eq(0)').trigger('click');               
-        } else if (grabados == "No"){
-            // No
-            $('#option-set-5f9971c1ef384760b92f0ca2093c81ce :eq(2)').trigger('click');     
-        }
-    })        
-});
+    if (engravingFinal == "Yes"){
+        // Yes
+        $('#option-set-5f9971c1ef384760b92f0ca2093c81ce :eq(0)').trigger('click'); 
+    } else if (engravingFinal == "No") {
+        // No
+        $('#option-set-5f9971c1ef384760b92f0ca2093c81ce :eq(1)').trigger('click'); 
+    }    
+
+})
 
 
 // Click en boton "checkout" frontend, para ir a función "Addtocart"
