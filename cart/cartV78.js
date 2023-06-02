@@ -36,13 +36,13 @@ LIST_OF_BIKETYPE.forEach( (e) => {
         CuadroType = e.id
 
         if (CuadroType == "endurance"){
-            // xs
+            // Endurance
             $('#option-set-44ab38aa9ec3274b93476adb8a90137d :eq(1)').trigger('click');               
         } else if (CuadroType == "allrounder"){
-            // s
+            // All Rounder
             $('#option-set-44ab38aa9ec3274b93476adb8a90137d :eq(2)').trigger('click');               
         } else if (CuadroType == "race") {
-            // m
+            // Race
             $('#option-set-44ab38aa9ec3274b93476adb8a90137d :eq(4)').trigger('click');               
         } 
 });
@@ -197,6 +197,21 @@ $('input[name="color"]').click( function(){
 
 });
 
+// Engraving
+$('input[name="engraving"]').click(function(){
+    engravingFinal = this.value;
+    console.log("engravingFinal: " + engravingFinal)
+
+    if (engravingFinal == "0"){
+        // Yes
+        $('#option-set-5f9971c1ef384760b92f0ca2093c81ce :eq(0)').trigger('click'); 
+    } else if (engravingFinal == "1") {
+        // No
+        $('#option-set-5f9971c1ef384760b92f0ca2093c81ce :eq(2)').trigger('click'); 
+    }    
+
+})
+
 
 
 // Click on Checkout button
@@ -217,7 +232,7 @@ function clearCart(){
 }
 
 function Addtocart(){
-    if (frame_set_chk == true){
+    /*if (frame_set_chk == true){
         // Add to cart Cuadro 
         $('.add-to-cart-button-cuadro').trigger('click');
 
@@ -236,7 +251,7 @@ function Addtocart(){
         cartempty = false
 
        
-    } else {
+    } else {*/
     
         // Add to cart Cuadro 
         $('.add-to-cart-button-cuadro').trigger('click');
@@ -250,21 +265,22 @@ function Addtocart(){
         // Add to cart manubrio
         $('.add-to-cart-button-manubrio').trigger('click');
 
+        // Add to cart engraving
+        $('.add-to-cart-button-engraving').trigger('click');
+
         // add to cart brushed
         if (baseFinal == 0){
             $('.add-to-cart-acabados-b').trigger('click');
 
         // add to cart sandblasted
-        } else if (baseFinal ==1){
+        } else {
             $('.add-to-cart-acabados-s').trigger('click');
         }
 
-
-        if (document.getElementById('inicialesCheckbox').checked == true){
-            $('#AddToCartEngraving').trigger('click')
-        }
-        // Add Engravings
-    }
+        //if (document.getElementById('inicialesCheckbox').checked == 'Yes'){
+            //$('#AddToCartEngraving').trigger('click')
+        //}
+ // Add Engravings
 };
 // 
 
