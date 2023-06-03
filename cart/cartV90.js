@@ -14,9 +14,7 @@ const CartWrapper = document.getElementById('cart_wrapper2')
 // var runOnce = true
 
 
-
-// Option triggers
-/*-----------------*/
+/*--------Option Triggers---------*/
 
 
 // Al seleccionar opción en frontend, trigger la opción en las variantes
@@ -221,19 +219,16 @@ $('input[name="engraving"]').click(function(){
 });
 
 
+/*--------Add items to cart---------*/
+
+
 // Click en boton "checkout" frontend, para ir a función "Addtocart"
 $('#irACheckout').click(function(){
     // setTimeout(1500);
     Addtocart()
 });
 
-// REVISAR SI ACTUALLY ESTA FUNCIONANDO ANYMORE 
-function clearCart(){
-    $("[data-wf-cart-action=remove-item]").each(function () {
-        // click the underlaying html element, not the jquery object
-        $(this)[0].click();
-    });
-}
+//FALTA FUNCIÓN CLEAR CART
 
 /*En Webflow, un producto se va al carrito una vez que selecciones la variante y des click en "Add to cart", la página tiene más de un producto, por lo que se ocupa un "Add to cart" para cada uno...*/
 // Función para que todos los productos se agregen al carrito al mismo tiempo
@@ -258,7 +253,6 @@ function Addtocart(){
     // add to cart grabados
     $('.add-to-cart-button-7').trigger('click');
 };
-
 
 var observer = new MutationObserver(function(mutationsList, observer) {
     for (var mutation of mutationsList){
