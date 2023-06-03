@@ -28,13 +28,7 @@ const LIST_OF_ENGRAVING = Object.values($('input[name="engraving"]')).splice(0,2
 // Option triggers
 /*-----------------*/
 
-// Base: option-set-473f0c4507fc8a3611c1c56eec28b196 
-// Diseño: option-set-e55da3ee4cafe7733d9e69f26fd2889f  
-// Color: option-set-6498b455feb4015a4d504ac123e07fe7 NO
 
-// Tamaño: option-set-8c8590cb750905590017c6ea84a82d68 NO
-// Ruedos: option-set-0b74dfd0408836fafae2da29edc42d19 NO
-// Grupo: option-set-53d2faa7ed87dcfe6f95678373b7be3a  NO
 
 const CartWrapper = document.getElementById('cart_wrapper2')
 
