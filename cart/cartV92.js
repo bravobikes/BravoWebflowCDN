@@ -209,17 +209,16 @@ $('input[name="color"]').click( function(){
 // Al seleccionar opción en frontend, trigger la opción en las variantes
 // ENGRAVING: Yes or No
 
-$('input[name="grabado"]').change(function() {
-    grabadoFinal = this.checked;
-    console.log("grabadoFinal: " + grabadoFinal);
-    if (grabadoFinal) {
-      // Yes, add initials
-      $('#option-set-5f9971c1ef384760b92f0ca2093c81ce :eq(0)').trigger('click');
+$('input[name="grabado"]').click(function(){
+    var isChecked = $(this).is(':checked');
+    if (isChecked){
+        // Yes
+        $('[data-option-id="7efd2aaf6e20547e2de73bda063f4693"]').trigger('click'); 
     } else {
-      // No, remove initials
-      $('#option-set-5f9971c1ef384760b92f0ca2093c81ce :eq(1)').trigger('click');
-    }
-  });
+        // No
+        $('[data-option-id="9edf06f130f4570e74fbeb568538be66"]').trigger('click');
+    }    
+});
 
 
 
