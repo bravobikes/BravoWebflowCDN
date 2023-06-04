@@ -1,8 +1,6 @@
 
-
 const fechaEntrega = document.getElementById("fechaEntrega")
 const fechaEntregaMobile = document.getElementById("fechaEntregaMobile")
-
 
 
 //Declaracion de variables  
