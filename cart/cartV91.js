@@ -208,14 +208,15 @@ $('input[name="color"]').click( function(){
 
 // Al seleccionar opción en frontend, trigger la opción en las variantes
 // ENGRAVING: Yes or No
+
 $('input[name="grabado"]').click(function() {
     grabadoFinal = this.checked;
     console.log("grabadoFinal: " + grabadoFinal);
-    if (grabadoFinal == true) {
-      // Yes
+    if (grabadoFinal) {
+      // Yes, add initials
       $('#option-set-5f9971c1ef384760b92f0ca2093c81ce :eq(0)').trigger('click');
-    } else if (grabadoFinal == false) {
-      // No
+    } else {
+      // No, remove initials
       $('#option-set-5f9971c1ef384760b92f0ca2093c81ce :eq(1)').trigger('click');
     }
   });
