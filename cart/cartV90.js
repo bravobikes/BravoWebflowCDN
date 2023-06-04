@@ -220,8 +220,6 @@ $('input[name="engraving"]').click(function(){
 });
 
 
-
-
 /*--------Add items to cart---------*/
 
 
