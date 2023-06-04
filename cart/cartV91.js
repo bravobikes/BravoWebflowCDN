@@ -209,7 +209,7 @@ $('input[name="color"]').click( function(){
 // Al seleccionar opción en frontend, trigger la opción en las variantes
 // ENGRAVING: Yes or No
 
-$('input[name="grabado"]').click(function() {
+$('input[name="grabado"]').change(function() {
     grabadoFinal = this.checked;
     console.log("grabadoFinal: " + grabadoFinal);
     if (grabadoFinal) {
