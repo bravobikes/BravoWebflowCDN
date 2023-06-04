@@ -205,20 +205,20 @@ $('input[name="color"]').click( function(){
     }
 });
 
+
 // Al seleccionar opción en frontend, trigger la opción en las variantes
 // ENGRAVING: Yes or No
-$('input[name="engraving"]').click(function(){
-    engravingFinal = this.value;
-    console.log("engravingFinal: " + engravingFinal)
-    if (engravingFinal == "0"){
-        // Yes
-        $('#option-set-5f9971c1ef384760b92f0ca2093c81ce :eq(0)').trigger('click'); 
-    } else if (engravingFinal == "1") {
-        // No
-        $('#option-set-5f9971c1ef384760b92f0ca2093c81ce :eq(1)').trigger('click'); 
-    }    
-});
-
+$('input[name="grabado"]').click(function() {
+    grabadoFinal = this.checked;
+    console.log("grabadoFinal: " + grabadoFinal);
+    if (grabadoFinal == true) {
+      // Yes
+      $('#option-set-5f9971c1ef384760b92f0ca2093c81ce :eq(0)').trigger('click');
+    } else if (grabadoFinal == false) {
+      // No
+      $('#option-set-5f9971c1ef384760b92f0ca2093c81ce :eq(1)').trigger('click');
+    }
+  });
 
 
 
