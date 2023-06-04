@@ -44,7 +44,7 @@ var temp =  PRECIO_FRAMESET + PRECIO_GRUPO + PRECIO_RUEDOS + PRECIO_MANUBRIO + P
 PrecioUSD = formatMoney(temp/conv)
 console.log(PrecioUSD)
 innerPrecio.innerText = PrecioUSD + ' USD'
-//innerPrecioM.innerText= PrecioUSD + ' USD'
+innerPrecioM.innerText= PrecioUSD + ' USD'
 
 
 // var myHeaders = new Headers();
