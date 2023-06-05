@@ -185,7 +185,6 @@ LIST_OF_BIKETYPE.forEach( (e) => {
 
 // Al seleccionar opción en frontend, trigger la opción en las variantes
 // GROUPSET : 105 y ULTEGRA
-
 LIST_OF_GROUPSET.forEach( (e) => {
     e.addEventListener('change', (event) => {
         if (event.target.checked) {
