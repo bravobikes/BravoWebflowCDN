@@ -217,11 +217,6 @@ LIST_OF_RINES.forEach((e) => {
     e.addEventListener('change', (event) => {
         if (event.target.checked) {
             console.log(event.target);
-            PESO_RUEDOS = parseInt(event.target.getAttribute('peso'), 10);
-            PRECIO_RUEDOS = parseInt(event.target.getAttribute('precio'), 10);
-            SetPrecio();
-            SetPeso();
-
             rinesFinal = e.value;
             console.log("rinesFinal: " + rinesFinal);
             if (rinesFinal == "0") {
@@ -235,6 +230,11 @@ LIST_OF_RINES.forEach((e) => {
                 ruedosEntrega = 1;
                 getDelivery();
             }
+            console.log(event.target);
+            PESO_RUEDOS = parseInt(event.target.getAttribute('peso'), 10);
+            PRECIO_RUEDOS = parseInt(event.target.getAttribute('precio'), 10);
+            SetPrecio();
+            SetPeso();
         }
     });
 });
