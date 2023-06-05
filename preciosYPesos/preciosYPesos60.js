@@ -1,3 +1,5 @@
+<script src="https://cdn.jsdelivr.net/gh/bravobikes/BravoWebflowCDN/preciosYPesos/preciosYPesos60.js"></script> 
+
 
 const innerPrecio = document.querySelector('#innerPrecio')
 const innerPeso = document.querySelector('#innerPeso')
