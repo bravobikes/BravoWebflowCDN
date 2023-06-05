@@ -189,8 +189,8 @@ LIST_OF_GROUPSET.forEach( (e) => {
     e.addEventListener('change', (event) => {
         if (event.target.checked) {
             console.log(event.target)
-            PESO_GRUPO = parseInt(event.target.getAttribute('peso'), 10) 
-            PRECIO_GRUPO = parseInt(event.target.getAttribute('precio'), 10) 
+            PESO_RUEDOS = parseInt(event.target.getAttribute('peso'), 10) 
+            PRECIO_RUEDOS = parseInt(event.target.getAttribute('precio'), 10) 
             SetPrecio();
             SetPeso();
             
@@ -213,117 +213,81 @@ LIST_OF_GROUPSET.forEach( (e) => {
  
 // Al seleccionar opción en frontend, trigger la opción en las variantes
 // RINES : Aluminio y Carbon
-LIST_OF_RINES.forEach( (e) => {
-    e.addEventListener('change', (event) => {
-        if (event.target.checked) {
-            console.log(event.target)
-            PESO_RUEDOS = parseInt(event.target.getAttribute('peso'), 10) 
-            PRECIO_RUEDOS = parseInt(event.target.getAttribute('precio'), 10) 
-            SetPrecio();
-            SetPeso();
-            
-            rinesFinal = e.value;
-            console.log("rinesFinal: " + rinesFinal)
-            if (rinesFinal == "0"){
-                // Aluminio
-                $('#option-set-010268edf9c5a7a711de03ee2b2d5247 :eq(0)').trigger('click');
-                ruedosEntrega = 0
-                getDelivery() 
-            } else if (rinesFinal == "1") {
-                // Carbon
-                $('#option-set-010268edf9c5a7a711de03ee2b2d5247 :eq(2)').trigger('click');
-                ruedosEntrega = 1
-                getDelivery() 
-            }   
-        }  
-    }); 
+$('input[name="rines"]').click( function(){
+    rinesFinal = this.value;
+    console.log("rinesFinal: " + rinesFinal)
+    if (rinesFinal == "0"){
+        // Aluminio
+        $('#option-set-010268edf9c5a7a711de03ee2b2d5247 :eq(0)').trigger('click');
+        ruedosEntrega = 0
+        getDelivery() 
+    } else if (rinesFinal == "1") {
+        // Carbon
+        $('#option-set-010268edf9c5a7a711de03ee2b2d5247 :eq(2)').trigger('click');
+        ruedosEntrega = 1
+        getDelivery() 
+    }   
 });
 
 // Al seleccionar opción en frontend, trigger la opción en las variantes
 // MANUBRIO : Aluminio y Carbon Aero
-LIST_OF_MANUBRIO.forEach( (e) => {
-    e.addEventListener('change', (event) => {
-        if (event.target.checked) {
-            console.log(event.target)
-            PESO_MANUBRIO = parseInt(event.target.getAttribute('peso'), 10) 
-            PRECIO_MANUBRIO = parseInt(event.target.getAttribute('precio'), 10) 
-            SetPrecio();
-            SetPeso();;
-            
-            manubrioFinal = e.value;
-            console.log("manubrioFinal: " + manubrioFinal)
-            if (manubrioFinal == "0"){
-                // Aluminio
-                $('#option-set-86ceabcd24d69345c43f8fbea81df71a :eq(0)').trigger('click');
-                manubrioEntrega = 0
-                getDelivery() 
-            } else if (manubrioFinal == "1") {
-                // Carbon Aero
-                $('#option-set-86ceabcd24d69345c43f8fbea81df71a :eq(2)').trigger('click');
-                manubrioEntrega = 1
-                getDelivery() 
-            }  
-        } 
-    });
+$('input[name="manubrio"]').click(function(){
+    manubrioFinal = this.value;
+    console.log("manubrioFinal: " + manubrioFinal)
+    if (manubrioFinal == "0"){
+        // Aluminio
+        $('#option-set-86ceabcd24d69345c43f8fbea81df71a :eq(0)').trigger('click');
+        manubrioEntrega = 0
+        getDelivery() 
+    } else if (manubrioFinal == "1") {
+        // Carbon Aero
+        $('#option-set-86ceabcd24d69345c43f8fbea81df71a :eq(2)').trigger('click');
+        manubrioEntrega = 1
+        getDelivery() 
+    }    
 });
 
 // Al seleccionar opción en frontend, trigger la opción en las variantes
 // ACABADOS
-LIST_OF_BASE.forEach( (e) => {
-    e.addEventListener('change', (event) => {
-        if (event.target.checked) {
-            console.log(event.target)
-            PRECIO_BASE = parseInt(event.target.getAttribute('precio'), 10) 
-            SetPrecio();
-            SetPeso();
-            
-            baseFinal = e.value;
-            if (baseFinal == 0){
-                // Brushed
-                $('#option-set-a54fde2b7ca48ae7ff0c18cbad1cdd79 :eq(0)').trigger('click'); 
-            } else if (baseFinal == 1) {
-                // Sanblasted
-                $('#option-set-845a8a0c20f6a95a40c063725084c7a4 :eq(0)').trigger('click'); 
-            }  
-        } 
-    });
+
+// BASE: Brushed y Sandblasted
+$('input[name="base"]').click( function(){
+    baseFinal = this.value;
+    if (baseFinal == 0){
+        // Brushed
+        $('#option-set-a54fde2b7ca48ae7ff0c18cbad1cdd79 :eq(0)').trigger('click'); 
+    } else if (baseFinal == 1) {
+        // Sanblasted
+        $('#option-set-845a8a0c20f6a95a40c063725084c7a4 :eq(0)').trigger('click'); 
+    }
 });
 
 //DISEÑO: Invertidos, Rombos, None
 // Pertenecen a diferentes grupos de productos en el sistema de Webflow, por eso más variantes
-LIST_OF_DISENO.forEach( (e) => {
-    e.addEventListener('change', (event) => {
-        if (event.target.checked) {
-            console.log(event.target)
-            PRECIO_DISENO = parseInt(event.target.getAttribute('precio'), 10) 
-            SetPrecio();
-            SetPeso();
-            
-            var v = e.value;
-            if(v == 0   ){
-                console.log("Invertido")
-                // Invertidos
-                // brushed
-                $('#option-set-9ba2cdc21b51ddff49c66de5ae8a7730 :eq(2)').trigger('click'); 
-                // sandblasted
-                $('#option-set-36fcfacf2c4b0114bbb751a1680cf542 :eq(2)').trigger('click'); 
-            }else if(v == 2){
-                console.log("Clean")
-                // None
-                // brushed
-                $('#option-set-9ba2cdc21b51ddff49c66de5ae8a7730 :eq(4)').trigger('click'); 
-                // sandblasted
-                $('#option-set-36fcfacf2c4b0114bbb751a1680cf542 :eq(4)').trigger('click'); 
-            }else if(v == 1){
-                console.log("Regular")
-                // Rombos
-                // brushed
-                $('#option-set-9ba2cdc21b51ddff49c66de5ae8a7730 :eq(0)').trigger('click'); 
-                // sandblasted
-                $('#option-set-36fcfacf2c4b0114bbb751a1680cf542 :eq(0)').trigger('click'); 
-            } 
-        } 
-    });
+$('input[name="diseno"]').click( function(){
+    var v = this.value;
+    if(v == 0   ){
+        console.log("Invertido")
+        // Invertidos
+        // brushed
+        $('#option-set-9ba2cdc21b51ddff49c66de5ae8a7730 :eq(2)').trigger('click'); 
+        // sandblasted
+        $('#option-set-36fcfacf2c4b0114bbb751a1680cf542 :eq(2)').trigger('click'); 
+    }else if(v == 2){
+        console.log("Clean")
+        // None
+        // brushed
+        $('#option-set-9ba2cdc21b51ddff49c66de5ae8a7730 :eq(4)').trigger('click'); 
+        // sandblasted
+        $('#option-set-36fcfacf2c4b0114bbb751a1680cf542 :eq(4)').trigger('click'); 
+    }else if(v == 1){
+        console.log("Regular")
+        // Rombos
+        // brushed
+        $('#option-set-9ba2cdc21b51ddff49c66de5ae8a7730 :eq(0)').trigger('click'); 
+        // sandblasted
+        $('#option-set-36fcfacf2c4b0114bbb751a1680cf542 :eq(0)').trigger('click'); 
+    }
 });
 
 // COLOR: Green, Teal, Bronze, Blue, Purple, Gold, Rose, Violet, Navy Blue, NA
