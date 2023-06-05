@@ -188,19 +188,27 @@ LIST_OF_BIKETYPE.forEach( (e) => {
 
 LIST_OF_GROUPSET.forEach( (e) => {
     e.addEventListener('change', (event) => {
-        groupsetFinal = e.value;
-        console.log("groupset: " + groupsetFinal)
-        if (groupsetFinal == "0"){
-            // 105
-            $('[data-option-id="7115a172ac0ce02ac1ef40f118d8e3d5"]').prop('checked', true);
-            grupoEntrega = 0
-            getDelivery()
-        } else if (groupsetFinal == "1") {
-            // Ultegra
-            $('[data-option-id="c92f4e47d55eebb09614075d9a281ea6"]').prop('checked', true);
-            grupoEntrega = 1
-            getDelivery() 
-        }  
+        if (event.target.checked) {
+            console.log(event.target)
+            PESO_RUEDOS = parseInt(event.target.getAttribute('peso'), 10) 
+            PRECIO_RUEDOS = parseInt(event.target.getAttribute('precio'), 10) 
+            SetPrecio();
+            SetPeso();
+            
+            groupsetFinal = e.value;
+            console.log("groupset: " + groupsetFinal)
+            if (groupsetFinal == "0"){
+                // 105
+                $('#option-set-8b0874b3c1eb6f928fccda8875ef7e5b :eq(0)').trigger('click');
+                grupoEntrega = 0
+                getDelivery()
+            } else if (groupsetFinal == "1") {
+                // Ultegra
+                $('#option-set-8b0874b3c1eb6f928fccda8875ef7e5b :eq(2)').trigger('click');
+                grupoEntrega = 1
+                getDelivery() 
+            }  
+        } 
     });
 });
  
