@@ -187,7 +187,7 @@ LIST_OF_BIKETYPE.forEach( (e) => {
 // GROUPSET : 105 y ULTEGRA
 
 LIST_OF_GROUPSET.forEach( (e) => {
-    e.addEventListener('change', (event) => {
+    e.addEventListener('click', (event) => {
         groupsetFinal = this.value;
         console.log("groupset: " + groupsetFinal)
         if (groupsetFinal == "0"){
