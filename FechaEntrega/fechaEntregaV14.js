@@ -1,3 +1,4 @@
+<script src="https://cdn.jsdelivr.net/gh/bravobikes/BravoWebflowCDN/FechaEntrega/fechaEntrega14.js"></script> 
 
 const fechaEntrega = document.getElementById("fechaEntrega")
 const fechaEntregaMobile = document.getElementById("fechaEntregaMobile")
