@@ -122,7 +122,7 @@ let Precio_No = 0;
     
 //saturation delay
 let delay = 7;
-    s
+
 //grupo
 let Fecha_G_105 = 21;
 let Fecha_G_Ult = 35;
