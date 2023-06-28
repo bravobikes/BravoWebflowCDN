@@ -113,7 +113,7 @@ let Precio_Teal = 7000;
 let Precio_Gree = 8000;
 
 //engraving
-let Precio_Yes = 100;
+let Precio_Yes = 0;
 let Precio_No = 0;
     
 /* Tiempos de Entrega */
@@ -547,15 +547,14 @@ function Addtocart(){
     $('.add-to-cart-grupo').trigger('click');
     $('.add-to-cart-llantas').trigger('click');
     $('.add-to-cart-button-manubrio').trigger('click');    
-    
+    $('.add-to-cart-button-7').trigger('click');
+
     if (baseFinal2 == 0){
         $('.add-to-cart-acabados-b').trigger('click');
     } else{
         $('.add-to-cart-acabados-s').trigger('click');
     }
-    
-    // add to cart grabados
-    $('.add-to-cart-button-7').trigger('click');
+
 };
 
 var observer = new MutationObserver(function(mutationsList, observer) {
