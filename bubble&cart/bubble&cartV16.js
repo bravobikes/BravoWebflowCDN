@@ -22,7 +22,6 @@ const LIST_OF_RINES = $('input[name="rines"]').toArray().splice(0, 2);
 const LIST_OF_MANUBRIO = $('input[name="manubrio"]').toArray().splice(0,2);
 const LIST_OF_BASE = $('input[name="base"]').toArray().splice(0,2)
 const LIST_OF_DISENO = $('input[name="diseno"]').toArray().splice(0,3)
-const LIST_OF_ENGRAVING = $('input[name="grabado"]').toArray().splice(0,2)
 
 const Checkbox = document.getElementById('checkbox');
 
