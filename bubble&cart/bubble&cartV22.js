@@ -540,6 +540,9 @@ $('#irACheckout').click(function(){
 // Función para que todos los productos se agregen al carrito al mismo tiempo
 
 function Addtocart(){
+
+
+
     $('.add-to-cart-button-cuadro').trigger('click');
     $('.add-to-cart-grupo').trigger('click');
     $('.add-to-cart-llantas').trigger('click');
