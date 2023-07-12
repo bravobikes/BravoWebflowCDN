@@ -545,16 +545,16 @@ function Addtocart() {
     var items = [];
   
     // Add selected items to the array in the desired order
-    items.push(document.getElementById('add-to-cart-button-cuadro'));
-    items.push(document.getElementById('add-to-cart-grupo'));
-    items.push(document.getElementById('add-to-cart-llantas'));
-    items.push(document.getElementById('add-to-cart-button-manubrio'));
-    items.push(document.getElementById('add-to-cart-button-7'));
+    items.push($('.add-to-cart-button-cuadro')[0]);
+    items.push($('.add-to-cart-grupo')[0]);
+    items.push($('.add-to-cart-llantas')[0]);
+    items.push($('.add-to-cart-button-manubrio')[0]);
+    items.push($('.add-to-cart-button-7')[0]);
   
     if (baseFinal2 == 0) {
-      items.push(document.getElementById('add-to-cart-acabados-b'));
+      items.push($('.add-to-cart-acabados-b')[0]);
     } else {
-      items.push(document.getElementById('add-to-cart-acabados-s'));
+      items.push($('.add-to-cart-acabados-s')[0]);
     }
   
     // Create a promise for each item to be added to the cart
@@ -578,7 +578,7 @@ function Addtocart() {
       // All items have been added to the cart
       // Proceed with further actions, if needed
     });
-  }   
+  }  
 
 
 /*--------6. Clear cart---------*/
