@@ -518,6 +518,7 @@ $('input[name="grabado"]').click(function(){
         PRECIO_ENGRAVING = Precio_Yes;
         // Yes
         $('[data-option-id="7efd2aaf6e20547e2de73bda063f4693"]').trigger('click');
+        initials = 1;
         SetPrecio(); 
     } else {
         PRECIO_ENGRAVING = Precio_No;
