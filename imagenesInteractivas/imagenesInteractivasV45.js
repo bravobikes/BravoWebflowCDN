@@ -227,14 +227,14 @@ const BICIS_URLS = {
     // None
     // 'NA-raw-sb':
     '000000100NA000':'https://uploads-ssl.webflow.com/6149043a3c69c4356cdb74b7/63c608b0ee2b48187a9e4990_Road-SB-Raw-Neutral.webp',
-    // 'NA-classic-sb': 
-    '000000111NA000': 'https://uploads-ssl.webflow.com/6149043a3c69c4356cdb74b7/64ae394c665ef07592d9b2da_Road-SB-Classic-Neutral.webp',
+    // 'NA-classic-sb': esta 
+    '000000111NA000': 'https://uploads-ssl.webflow.com/6149043a3c69c4356cdb74b7/63c608b2b097af35a8ab0be3_Road-SB-Classic-Neutral.webp',
     // 'NA-sleeve-sb':
     '000000112NA000':'https://uploads-ssl.webflow.com/6149043a3c69c4356cdb74b7/63c608b2b097af35a8ab0be3_Road-SB-Classic-Neutral.webp',
     // 'NA-raw-br':
     '000000000NA000':'https://uploads-ssl.webflow.com/6149043a3c69c4356cdb74b7/63c608b3da4f7258f512688e_Road-BR-Raw-Neutral.webp',
-    // 'NA-classic-br':
-    '000000011NA000': 'https://uploads-ssl.webflow.com/6149043a3c69c4356cdb74b7/64ae394f665ef07592d9b629_Road-BR-Classic-Neutral.webp',
+    // 'NA-classic-br': esta
+    '000000011NA000': 'https://uploads-ssl.webflow.com/6149043a3c69c4356cdb74b7/63c608b346d7cf0eee3df0b2_Road-BR-Classic-Neutral.webp',
     // 'NA-sleeve-br':
     '000000012NA000':'https://uploads-ssl.webflow.com/6149043a3c69c4356cdb74b7/63c608b346d7cf0eee3df0b2_Road-BR-Classic-Neutral.webp',
     }

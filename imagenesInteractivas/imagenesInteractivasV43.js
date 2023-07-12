@@ -230,7 +230,7 @@ const BICIS_URLS = {
     // 'NA-classic-sb': 
     '000000111NA000': 'https://uploads-ssl.webflow.com/6149043a3c69c4356cdb74b7/63c608b2b097af35a8ab0be3_Road-SB-Classic-Neutral.webp',
     // 'NA-sleeve-sb':
-    '000000112NA000':'https://uploads-ssl.webflow.com/6149043a3c69c4356cdb74b7/63c608b2b097af35a8ab0be3_Road-SB-Classic-Neutral.webp',
+    '000000112NA000':'',
     // 'NA-raw-br':
     '000000000NA000':'https://uploads-ssl.webflow.com/6149043a3c69c4356cdb74b7/63c608b3da4f7258f512688e_Road-BR-Raw-Neutral.webp',
     // 'NA-classic-br':
