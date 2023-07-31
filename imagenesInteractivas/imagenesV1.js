@@ -367,7 +367,6 @@ $('input[name="groupset"]').click(function () {
             manubrioImg1.src =BICIS_URLS[('210000100NA000')]
         }
     }
-
 });
 
 //Base
