@@ -17,6 +17,7 @@ const imagenMobile = document.getElementById('imagenMobile');
 const grupoMobile1 =  document.getElementById('grupoMobile1');
 const ruedos2Mobile =  document.getElementById('ruedos2Mobile');
 const manubrioImgMobile1 = document.querySelector('#manubrioImgMobile1');
+const biciFinalMobile = document.getElementById('biciFinalMobile');
 
 const webflowSrc = 'https://uploads-ssl.webflow.com/6149043a3c69c4356cdb74b7/62';
 const gifImgLoading = 'https://uploads-ssl.webflow.com/6149043a3c69c4356cdb74b7/62e8909354b3000715341c62_loader.gif';
@@ -395,6 +396,7 @@ function CambiarImagenColor(){
     imagen.src = BICIS_URLS[(CODEIMG)]
     biciFinal.src = BICIS_URLS[(CODEIMG_FINAL)]
     biciFinal2.src = BICIS_URLS[(CODEIMG_FINAL)]
+    biciFinalMobile.src = BICIS_URLS[(CODEIMG_FINAL)]
 
     imagenMobile.src = BICIS_URLS[(CODEIMG)]
 };
