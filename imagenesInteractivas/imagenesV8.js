@@ -17,7 +17,6 @@ const imagenMobile = document.getElementById('imagenMobile');
 const grupoMobile1 =  document.getElementById('grupoMobile1');
 const ruedos2Mobile =  document.getElementById('ruedos2Mobile');
 const manubrioImgMobile1 = document.querySelector('#manubrioImgMobile1');
-const biciFinalMobile = document.getElementById('biciFinalMobile');
 
 const webflowSrc = 'https://uploads-ssl.webflow.com/6149043a3c69c4356cdb74b7/62';
 const gifImgLoading = 'https://uploads-ssl.webflow.com/6149043a3c69c4356cdb74b7/62e8909354b3000715341c62_loader.gif';
@@ -68,16 +67,16 @@ const BICIS_URLS = {
     // CompleteImg4
     '400000100NA000':'https://uploads-ssl.webflow.com/6149043a3c69c4356cdb74b7/63a108bd54dbb2bbd421c8eb_V4-Road-SB-Sleeve-Carbon.webp',
     // Groupset
-        //105
+    //105
     '500000100NA000':'https://uploads-ssl.webflow.com/6149043a3c69c4356cdb74b7/64c592469af9cc98c1904235_V5-Road-SB-Sleeve-Carbon.png',
     '500000100NA001':'https://uploads-ssl.webflow.com/6149043a3c69c4356cdb74b7/63c5eb77b097af014ea89df7_V5-Road-SB-Sleeve-Aluminio.webp',
         //Ultegra
-    '500010100NA000':'https://uploads-ssl.webflow.com/6149043a3c69c4356cdb74b7/64ca9634e44af933825b5ca6_ultegra-cabled-carbon-2.png',
+    '500010100NA000':'https://uploads-ssl.webflow.com/6149043a3c69c4356cdb74b7/64d1981a273dcc86ecaad0a9_ultegra-carbon-3.png',
     '500001100NA001':'https://uploads-ssl.webflow.com/6149043a3c69c4356cdb74b7/64c9c0286193a04660b41e65_ultegra-groupset-cabled.png',
     
     //'600000100NA000':'https://uploads-ssl.webflow.com/6149043a3c69c4356cdb74b7/63a108c2d6b229189d4919a4_V6-Road-SB-Sleeve-Carbon.webp',
     //'600000100NA001':'https://uploads-ssl.webflow.com/6149043a3c69c4356cdb74b7/63c5eb775c029008fc632017_V6-Road-SB-Sleeve-Aluminio.webp',
-   
+    
     //Llantas 1
     '110001000NA000':'https://uploads-ssl.webflow.com/6149043a3c69c4356cdb74b7/63a108c26b628056d497c22d_V7-Road-SB-Sleeve-Carbon.webp',
     '120000000NA000':'https://uploads-ssl.webflow.com/6149043a3c69c4356cdb74b7/63a108be9eeb4ef90b37c706_V7-Road-SB-Sleeve-Aluminio.webp',
@@ -90,8 +89,8 @@ const BICIS_URLS = {
     '210000100NA000':'https://uploads-ssl.webflow.com/6149043a3c69c4356cdb74b7/63a108bd8f7594b9fb8b35d5_V9-Road-SB-Sleeve-Aluminio.webp',
     '220000100NA000':'https://uploads-ssl.webflow.com/6149043a3c69c4356cdb74b7/63a108c26b6280503c97c22c_V9-Road-SB-Sleeve-Carbon.webp',
         // Aero
-    '210000100NA0001':'https://uploads-ssl.webflow.com/6149043a3c69c4356cdb74b7/64c9b6ceed6a63c07aaad3f3_rines-aluminio-aerobar.png',
-    '220000100NA0001':'https://uploads-ssl.webflow.com/6149043a3c69c4356cdb74b7/64c9b6d34d2e18f9c8b9a650_rines-carbon-aerobar.png',
+    '210000100NA0001':'https://uploads-ssl.webflow.com/6149043a3c69c4356cdb74b7/64d19844d6587cc3845699ff_alu-aero-2.png',
+    '220000100NA0001':'https://uploads-ssl.webflow.com/6149043a3c69c4356cdb74b7/64d1983efaa5e45333c0dc7f_carbon-aero-2.png',
 
 
 
@@ -396,7 +395,6 @@ function CambiarImagenColor(){
     imagen.src = BICIS_URLS[(CODEIMG)]
     biciFinal.src = BICIS_URLS[(CODEIMG_FINAL)]
     biciFinal2.src = BICIS_URLS[(CODEIMG_FINAL)]
-    biciFinalMobile.src = BICIS_URLS[(CODEIMG_FINAL)]
 
     imagenMobile.src = BICIS_URLS[(CODEIMG)]
 };
