@@ -602,10 +602,6 @@ function AddtocartFR() {
     
     items.push($('.add-to-cart-button-7')[0]);
     
-    // Trigger the 'click' event for each item in the array
-    items.forEach(function(item) {
-      item.click();
-    });
 };
 
 // Click en boton "checkout" frontend, para ir a función "Addtocart"
