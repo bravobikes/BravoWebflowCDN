@@ -567,41 +567,33 @@ $('input[name="grabado"]').click(function(){
 
 function Addtocart() {
     var items = [];
-  
+    
     // Add selected items to the array in the desired order
-    items.push($('.add-to-cart-button-cuadro')[0]);
-    items.push($('.add-to-cart-grupo')[0]);
-    items.push($('.add-to-cart-llantas')[0]);
-    items.push($('.add-to-cart-button-manubrio')[0]);
-    
-    if (baseFinal2 == 0) {
-      items.push($('.add-to-cart-acabados-b')[0]);
-    } else {
-      items.push($('.add-to-cart-acabados-s')[0]);
+    if (checkbox.checked) { //frameset only
+        items.push($('.add-to-cart-button-cuadro')[0]);
+        if (baseFinal2 == 0) {
+            items.push($('.add-to-cart-acabados-b')[0]);
+        } else {
+            items.push($('.add-to-cart-acabados-s')[0]);
+        }
+        items.push($('.add-to-cart-button-7')[0]);
+    }else{ //full bike
+        items.push($('.add-to-cart-button-cuadro')[0]);
+        items.push($('.add-to-cart-grupo')[0]);
+        items.push($('.add-to-cart-llantas')[0]);
+        items.push($('.add-to-cart-button-manubrio')[0]);
+        if (baseFinal2 == 0) {
+            items.push($('.add-to-cart-acabados-b')[0]);
+            } else {
+            items.push($('.add-to-cart-acabados-s')[0]);
+            }
+        items.push($('.add-to-cart-button-7')[0]);
     }
-    
-    items.push($('.add-to-cart-button-7')[0]);
     
     // Trigger the 'click' event for each item in the array
     items.forEach(function(item) {
       item.click();
     });
-};
-// Boton checkout de frameset only
-function AddtocartFR() {
-    var items = [];
-  
-    // Add selected items to the array in the desired order
-    items.push($('.add-to-cart-button-cuadro')[0]);
-    
-    if (baseFinal2 == 0) {
-      items.push($('.add-to-cart-acabados-b')[0]);
-    } else {
-      items.push($('.add-to-cart-acabados-s')[0]);
-    }
-    
-    items.push($('.add-to-cart-button-7')[0]);
-    
 };
 
 // Click en boton "checkout" frontend, para ir a función "Addtocart"
@@ -612,10 +604,6 @@ $('#irACheckout').click(function(){
 
 $('#addAgain').click(function(){
     Addtocart();
-});
-$('#irACheckoutFR').click(function(){
-    // setTimeout(1500);
-    AddtocartFR();
 });
 
 // Function to hide the modal with a move-out effect
