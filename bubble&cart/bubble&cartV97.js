@@ -98,7 +98,7 @@ newPrecioM.innerText= "+ " + formatMoney((Precio_M_Carb - 860)/conv);
 
 //ruedos
 let Precio_R_Al = 6013;
-let Precio_R_Carb = 6013 * 2.5;
+let Precio_R_Carb = 15000;
 newPrecioR.innerText = "+ " + formatMoney((Precio_R_Carb - 6013)/conv);
 
 //finish
@@ -128,7 +128,7 @@ let Precio_No = 0;
 // en dias
     
 //saturation delay
-let delay = 7;
+let delay = 10;
 
 //grupo
 let Fecha_G_105 = 21;
@@ -205,7 +205,7 @@ function getDelivery() {
   }  
 
 function SetPeso() {
-    var bubble = PESO_FRAMESET + PESO_GRUPO + PESO_RUEDOS + PESO_MANUBRIO;
+    var bubble = PESO_FRAMESET + PESO_GRUPO + PESO_RUEDOS + PESO_MANUBRIO + 550;
     Peso.innerText = (bubble / 1000) + " Kg";
     PesoM.innerText = (bubble / 1000) + " Kg";
 }
@@ -218,11 +218,7 @@ function formatMoney(num) {
   }  
 
 function SetPrecio() {
-    if (checkbox.checked) { //frameset only
-        var bubble = PRECIO_FRAMESET + PRECIO_BASE + PRECIO_DISENO + PRECIO_COLOR + PRECIO_ENGRAVING;
-    } else{
-        var bubble = PRECIO_FRAMESET + PRECIO_GRUPO + PRECIO_RUEDOS + PRECIO_MANUBRIO + PRECIO_BASE + PRECIO_DISENO + PRECIO_COLOR + PRECIO_ENGRAVING;
-    }
+    var bubble = PRECIO_FRAMESET + PRECIO_GRUPO + PRECIO_RUEDOS + PRECIO_MANUBRIO + PRECIO_BASE + PRECIO_DISENO + PRECIO_COLOR + PRECIO_ENGRAVING;
     let PrecioUSD = formatMoney(bubble/conv);
     Precio.innerText = PrecioUSD + ' USD';
     PrecioM.innerText = PrecioUSD + ' USD'
